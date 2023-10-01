@@ -7,6 +7,7 @@ export function Accountpopup(props) {
     const [user, setUser] = useState([]);
     const [allow, Setallow] = useState(false)
     let id = getdata();
+
     useEffect(() => {
         GETapi(id).then((response) => {
             setUser(response.data.users[0]);
@@ -16,7 +17,7 @@ export function Accountpopup(props) {
             console.log(err);
             Setallow(false)
         })
-    }, [])
+    }, [id])
 
     const logouthandler = () => {
         removedata();
