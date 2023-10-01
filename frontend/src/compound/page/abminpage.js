@@ -131,7 +131,7 @@ export function Adminpage() {
                 console.log(err);
             })
         }
-    }, [])
+    }, [location.pathname, id])
 
     useEffect(() => {
         if (data.length !== 0) {
@@ -146,7 +146,7 @@ export function Adminpage() {
                 }
             )
         }
-    }, [data])
+    }, [data, input])
 
     const [file, setFile] = useState();
     const [filename, setFilename] = useState();
@@ -177,7 +177,7 @@ export function Adminpage() {
         } catch (err) {
             console.log(err);
         }
-    }, [filename])
+    }, [filename, file, input, name])
 
     return (
         <Fragment>

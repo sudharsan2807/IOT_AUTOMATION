@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
-import { getadmin, removedata } from '../scrives/storage'
+import { removedata } from '../scrives/storage'
 import { Accountpopup } from '../alert/account';
 import { adminauth } from '../scrives/auth';
 
@@ -22,7 +22,7 @@ export function Head(prop) {
         } else {
             Setfilter(false)
         }
-    }, [location.pathname])
+    }, [location.pathname, id])
     const accounthandler = () => {
         Setaccount(true)
     }
