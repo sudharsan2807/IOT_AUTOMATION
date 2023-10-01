@@ -131,6 +131,7 @@ export function Adminpage() {
                 console.log(err);
             })
         }
+        document.title = "Admin-THINKSPEAK"
     }, [location.pathname, id])
 
     useEffect(() => {

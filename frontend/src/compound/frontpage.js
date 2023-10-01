@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MESS_SEND } from "../scrives/api/Apifirebase";
 
@@ -8,6 +8,10 @@ export function Front() {
             console.log(err);
         })
     }
+
+    useEffect(() => {
+        document.title = "Register-THINKSPEAK"
+    }, [])
     return (
         <Fragment>
             <div class="overlay"></div>

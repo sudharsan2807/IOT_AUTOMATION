@@ -32,6 +32,8 @@ export function Home() {
         }).catch((err) => {
             console.log(err);
         })
+
+        document.title = "Home-THINKSPEAK"
     }, [])
 
     const Searchchange = (event) => {

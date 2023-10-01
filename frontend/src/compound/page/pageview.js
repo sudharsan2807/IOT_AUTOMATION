@@ -17,6 +17,7 @@ export function Viewpage() {
             .catch((err) => {
                 console.log(err);
             });
+        document.title = "Videos-THINKSPEAK"
     }, [id]);
 
     const filterhandler = () => {
