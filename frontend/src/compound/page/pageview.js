@@ -75,7 +75,7 @@ export function Viewpage() {
                                 : null
                             }
                             <li>
-                                <img src="/material/social-media/youtubr.png" alt="" />
+                                <img src="/material/social-media/youtubr.png" onClick={() => { window.location.href = "https://youtube.com/@thinkarduino6078?si=LdBJdpsBNpI15Nst" }} alt="" />
                                 <img src="/material/social-media/instagram.png" alt="" />
                                 <img src="/material/social-media/facebook.png" alt="" />
                                 <img src="/material/social-media/twiiter.png" alt="" />
@@ -91,7 +91,7 @@ export function Viewpage() {
                             </p>
                         </div>
                         <div className="social-media">
-                            <div className="icon-box">
+                            <div className="icon-box" onClick={() => { window.location.href = "https://youtube.com/@thinkarduino6078?si=LdBJdpsBNpI15Nst" }}>
                                 <img src="/material/social-media/youtubr.png" alt="" />
                                 <span>YouTube</span>
                             </div>
@@ -179,7 +179,7 @@ export function Viewpage() {
                         </p>
                     </div>
                     <div className="social-media">
-                        <div className="icon-box">
+                        <div className="icon-box" onClick={() => { window.location.href = "https://youtube.com/@thinkarduino6078?si=LdBJdpsBNpI15Nst" }}>
                             <img src="/material/social-media/youtubr.png" alt="" />
                             <span>YouTube</span>
                         </div>
