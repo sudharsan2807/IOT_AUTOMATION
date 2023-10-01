@@ -1,5 +1,6 @@
 import axios from "axios"
 
+const Base_URL = "https://youtube-video-y7dm.onrender.com";
 export const POST_API = (data) => {
     let info = {
         title: data.title,
@@ -12,25 +13,25 @@ export const POST_API = (data) => {
         product: data.products
     }
 
-    return axios.post("http://localhost:4500/details/post", info)
+    return axios.post(`${Base_URL}/details/post`, info)
 }
 
 export const GET_API = (id) => {
-    return axios.get(`http://localhost:4500/details/get/${id}`)
+    return axios.get(`${Base_URL}/details/get/${id}`)
 }
 
 export const PUT_API = (id, data) => {
-    return axios.put(`http://localhost:4500/details/upd/${id}`, data)
+    return axios.put(`${Base_URL}/details/upd/${id}`, data)
 }
 
 export const GET_API_ALL = () => {
-    return axios.get('http://localhost:4500/details/get/all');
+    return axios.get(`${Base_URL}/details/get/all`);
 }
 
 export const DELETE_API = (id) => {
-    return axios.delete(`http://locslhost:4500/details/delete/${id}`)
+    return axios.delete(`${Base_URL}/details/delete/${id}`)
 }
 
 export const SEARCH_API = (searchTerm) => {
-    return axios.get(`http://localhost:4500/details/search?search=${searchTerm}`)
+    return axios.get(`${Base_URL}/details/search?search=${searchTerm}`)
 }
