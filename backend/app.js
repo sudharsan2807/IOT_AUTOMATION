@@ -4,14 +4,16 @@ const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
 const filesave = require('./file'); // Assuming filesave.js is in the same directory
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 4500;
 
 app.use(express.json());
 app.use(cors());
-
-mongoose.connect('mongodb+srv://sudharsan2807:' + encodeURIComponent('sony#2807') + '@cluster0.kfidy0y.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true }).then(() => {
+const mongodbUri = process.env.MONGODB_URI;
+console.log(mongodbUri);
+mongoose.connect(mongodbUri, { useNewUrlParser: true }).then(() => {
     console.log(`Connected to MongoDB`);
 }).catch((err) => {
     console.error(err);
